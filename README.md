@@ -28,7 +28,32 @@ To formulate a C program to convert a decimal number into its binary equivalent 
 ### Step 8: 
    Stop
 # Program:
+    #include <stdio.h>
+    
+    int main() {
+        int num, binary[32], i = 0;
+    
+        printf("Enter a decimal number: ");
+        scanf("%d", &num);
+    
+        while (num > 0) {
+            binary[i] = num % 2;
+            num = num / 2;
+            i++;
+        }
+    
+        printf("Binary equivalent: ");
+        for (int k = i - 1; k >= 0; k--) {
+            printf("%d", binary[k]);
+        }
+    
+        return 0;
+    }
+
 # Output:
+Enter a decimal number: 10
+
+Binary equivalent: 1010
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -67,7 +92,62 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 9: 
   Stop
 # Program:
+    #include <stdio.h>
+    
+    int main() {
+        int m, i, j, k;
+        int min, max, col;
+        int a[10][10];
+    
+        printf("Enter order of matrix: ");
+        scanf("%d", &m);
+    
+        printf("Enter matrix elements:\n");
+        for (i = 0; i < m; i++) {
+            for (j = 0; j < m; j++) {
+                scanf("%d", &a[i][j]);
+            }
+        }
+    
+        for (i = 0; i < m; i++) {
+            min = a[i][0];
+            col = 0;
+    
+            for (j = 1; j < m; j++) {
+                if (a[i][j] < min) {
+                    min = a[i][j];
+                    col = j;
+                }
+            }
+    
+            max = a[0][col];
+            for (k = 1; k < m; k++) {
+                if (a[k][col] > max)
+                    max = a[k][col];
+            }
+    
+            if (min == max) {
+                printf("Saddle Point = %d at position (%d,%d)\n", min, i, col);
+                return 0;
+            }
+        }
+    
+        printf("No Saddle Point found");
+        return 0;
+    }
+
 # Output:
+Enter order of matrix: 3
+
+Enter matrix elements:
+
+1 2 3
+
+4 5 6
+
+7 8 9
+
+No Saddle Point found
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -101,7 +181,31 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 10: 
   Stop
 # Program:
+    #include <stdio.h>
+    
+    int main() {
+        char s[100], d[100];
+        int i, j = 0;
+    
+        printf("Enter a string: ");
+        scanf("%[^\n]s", s);
+    
+        for (i = 0; s[i] != '\0'; i++);
+        i--;
+    
+        for (; i >= 0; i--) {
+            d[j++] = s[i];
+        }
+        d[j] = '\0';
+    
+        printf("Reversed string: %s", d);
+        return 0;
+    }
+
 # Output:
+Enter a string: Hello
+
+Reversed string: olleH
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -135,7 +239,45 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:
   Stop
 # Program:
+    #include <stdio.h>
+    #include <string.h>
+    
+    int main() {
+        char s[100];
+        int visited[256] = {0};
+        int i, j, count;
+    
+        printf("Enter a string: ");
+        scanf("%[^\n]", s);
+    
+        for (i = 0; s[i] != '\0'; i++) {
+            if (visited[(unsigned char)s[i]] == 1)
+                continue;
+    
+            count = 1;
+            for (j = i + 1; s[j] != '\0'; j++) {
+                if (s[i] == s[j])
+                    count++;
+            }
+    
+            printf("%c = %d\n", s[i], count);
+            visited[(unsigned char)s[i]] = 1;
+        }
+    
+        return 0;
+    }
+
 # Output:
+
+Enter a string: hello
+
+h = 1
+
+e = 1
+
+l = 2
+
+o = 1
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -169,7 +311,54 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8: 
   Stop
 # Program:
+    #include <stdio.h>
+    #include <string.h>
+    
+    int main() {
+        char str[200], words[50][50];
+        int i = 0, j = 0, k = 0, count = 0;
+    
+        printf("Enter a string: ");
+        scanf("%[^\n]s", str);
+    
+        for (i = 0; ; i++) {
+            if (str[i] == ' ' || str[i] == '\0') {
+                words[count][j] = '\0';
+                count++;
+                j = 0;
+                if (str[i] == '\0')
+                    break;
+            } else {
+                words[count][j++] = str[i];
+            }
+        }
+    
+        for (i = 0; i < count; i++) {
+            if (words[i][0] == '\0')
+                continue;
+            for (j = i + 1; j < count; j++) {
+                if (strcmp(words[i], words[j]) == 0) {
+                    words[j][0] = '\0';
+                }
+            }
+        }
+    
+        printf("String after removing duplicate words:\n");
+        for (i = 0; i < count; i++) {
+            if (words[i][0] != '\0')
+                printf("%s ", words[i]);
+        }
+    
+        return 0;
+    }
+
 # Output:
+
+Enter a string: hello world hello
+
+String after removing duplicate words:
+
+hello world
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
