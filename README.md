@@ -51,9 +51,8 @@ To formulate a C program to convert a decimal number into its binary equivalent 
     }
 
 # Output:
-Enter a decimal number: 10
+<img width="499" height="157" alt="image" src="https://github.com/user-attachments/assets/a460ba66-5385-4315-a9d4-3e9ebdebb6ad" />
 
-Binary equivalent: 1010
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -137,17 +136,8 @@ Thus, the program was implemented and executed successfully, and the required ou
     }
 
 # Output:
-Enter order of matrix: 3
+<img width="474" height="241" alt="image" src="https://github.com/user-attachments/assets/a866159d-3162-4bfa-9f12-47b2e47803cd" />
 
-Enter matrix elements:
-
-1 2 3
-
-4 5 6
-
-7 8 9
-
-No Saddle Point found
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -203,9 +193,8 @@ Thus, the program was implemented and executed successfully, and the required ou
     }
 
 # Output:
-Enter a string: Hello
+<img width="267" height="183" alt="image" src="https://github.com/user-attachments/assets/d9e565db-1f6b-4549-ba98-c04144ad8b9c" />
 
-Reversed string: olleH
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -269,15 +258,8 @@ Thus, the program was implemented and executed successfully, and the required ou
 
 # Output:
 
-Enter a string: hello
+<img width="280" height="217" alt="image" src="https://github.com/user-attachments/assets/469aa7e9-8366-465a-830b-0585e9639fe6" />
 
-h = 1
-
-e = 1
-
-l = 2
-
-o = 1
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -353,12 +335,8 @@ Thus, the program was implemented and executed successfully, and the required ou
     }
 
 # Output:
+<img width="504" height="199" alt="image" src="https://github.com/user-attachments/assets/e249074f-586e-4efb-abe9-11c82ce3488d" />
 
-Enter a string: hello world hello
-
-String after removing duplicate words:
-
-hello world
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
